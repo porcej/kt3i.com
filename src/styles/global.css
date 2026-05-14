@@ -146,12 +146,8 @@ h2 {
 	font-size: 10px;
 	font-weight: 600;
 	letter-spacing: 2px;
-	margin: 44px 0 24px;
+	margin: 0 0 24px;
 	text-transform: uppercase;
-}
-
-.column:first-child .section {
-	margin-top: 0;
 }
 
 .item-block {
@@ -292,11 +288,7 @@ footer {
 		margin-bottom: 64px;
 	}
 
-	.column .section {
+	.column:not(:first-child) .section {
 		margin-top: 44px;
-	}
-
-	.column:first-child .section {
-		margin-top: 0;
 	}
 }
