@@ -1,0 +1,302 @@
+/*
+ * kt3i.com — derived from legacy style.css; layout uses grid instead of floats.
+ */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+footer,
+header,
+main,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	color: #222;
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #0081b6;
+	padding-bottom: 2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: transparent;
+	transition:
+		color 0.35s ease,
+		border-color 0.35s ease;
+}
+
+a:hover {
+	color: #0081b6;
+	border-bottom-color: rgba(0, 129, 182, 0.35);
+}
+
+a:focus-visible {
+	outline: 2px solid #0081b6;
+	outline-offset: 3px;
+}
+
+::selection {
+	background: #fef9d8;
+}
+
+p,
+footer {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+
+#main {
+	max-width: 960px;
+	margin: 0 auto 180px;
+	padding: 0 20px;
+}
+
+.welcome,
+.content {
+	margin-top: 120px;
+	text-align: center;
+}
+
+.copyright {
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 200;
+	margin: 0 auto;
+	max-width: 684px;
+	padding-bottom: 4px;
+}
+
+.hero-name {
+	font-weight: 600;
+	background: linear-gradient(120deg, #006a94 0%, #0081b6 45%, #00a3d9 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+@supports not (background-clip: text) {
+	.hero-name {
+		color: #0081b6;
+		background: none;
+	}
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+	font-family: 'Lora', Georgia, serif;
+	color: #999;
+}
+
+.content {
+	margin-top: 64px;
+}
+
+.columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 6%;
+	text-align: left;
+	margin-bottom: 100px;
+}
+
+.section {
+	color: #666;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 44px 0 24px;
+	text-transform: uppercase;
+}
+
+.column:first-child .section {
+	margin-top: 0;
+}
+
+.item-block {
+	margin-bottom: 24px;
+}
+
+.item-name {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+.item-name a {
+	border-bottom: 1px dotted #c2dce6;
+	color: #222;
+	font-weight: 600;
+}
+
+.item-name a:hover {
+	color: #0081b6;
+	border-bottom-color: #0081b6;
+}
+
+.item-description {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.social-links ul {
+	text-align: center;
+	padding: 40px 0 24px;
+}
+
+.social-links ul li {
+	display: inline-block;
+	padding: 0 20px 0 0;
+}
+
+.social-links li:last-child {
+	padding-right: 0;
+}
+
+.social-links li a {
+	color: #999;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.4em;
+	height: 1.4em;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.social-links li a:hover {
+	color: #0081b6;
+}
+
+.social-links svg {
+	width: 1.4em;
+	height: 1.4em;
+}
+
+footer {
+	clear: both;
+}
+
+/* Article pages */
+.article-main {
+	max-width: 720px;
+	margin: 0 auto 120px;
+	padding: 48px 20px 80px;
+	text-align: left;
+}
+
+.article-main h1 {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.article-main h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #222;
+	margin-top: 1.75em;
+	margin-bottom: 0.5em;
+	text-align: left;
+}
+
+.article-main h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	font-family: 'Lora', Georgia, serif;
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+.article-main p,
+.article-main li {
+	font-size: 15px;
+	line-height: 1.5;
+	margin-bottom: 0.75em;
+}
+
+.article-main ol {
+	list-style: decimal;
+	padding-left: 1.5em;
+	margin: 1em 0;
+}
+
+.article-main ol li {
+	margin-bottom: 0.85em;
+}
+
+.article-main img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1em auto;
+	border-radius: 4px;
+}
+
+.article-back {
+	display: inline-block;
+	margin-bottom: 2rem;
+	font-size: 14px;
+}
+
+@media only screen and (max-device-width: 720px),
+	(max-width: 720px) {
+	#main {
+		width: 100%;
+		max-width: 580px;
+	}
+
+	.columns {
+		grid-template-columns: 1fr;
+		gap: 0;
+		margin-bottom: 64px;
+	}
+
+	.column .section {
+		margin-top: 44px;
+	}
+
+	.column:first-child .section {
+		margin-top: 0;
+	}
+}

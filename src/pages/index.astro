@@ -1,0 +1,38 @@
+---
+import SiteChrome from '../layouts/SiteChrome.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import ColumnSection from '../components/ColumnSection.astro';
+import { getCollection } from 'astro:content';
+
+const homeEntries = await getCollection('home');
+const home = homeEntries[0];
+if (!home) throw new Error('Add src/content/home/index.md with frontmatter.');
+
+const d = home.data;
+---
+
+<SiteChrome
+	title={d.title}
+	description={d.description}
+	ogImage={d.ogImage}
+	social={d.social}
+	copyrightName={d.copyrightName}
+	copyrightUrl={d.copyrightUrl}
+>
+	<div id="main" slot="main">
+		<header class="welcome">
+			<h1>
+				{d.heroGreeting} <span class="hero-name">{d.heroName}</span>
+			</h1>
+			<h2>{d.heroRoles}</h2>
+		</header>
+
+		<SocialLinks links={d.social} ariaLabel="Social" />
+
+		<main class="content">
+			<div class="columns">
+				{d.columns.map((col) => <ColumnSection heading={col.heading} items={col.items} />)}
+			</div>
+		</main>
+	</div>
+</SiteChrome>

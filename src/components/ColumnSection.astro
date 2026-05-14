@@ -1,0 +1,61 @@
+---
+interface TailLink {
+	label: string;
+	href: string;
+}
+
+interface Item {
+	name: string;
+	description?: string;
+	href?: string;
+	tailLinks?: TailLink[];
+}
+
+interface Props {
+	heading: string;
+	items: Item[];
+}
+
+const { heading, items } = Astro.props;
+
+function linkAttrs(href: string) {
+	const external = href.startsWith('http');
+	return external
+		? { target: '_blank' as const, rel: 'noopener noreferrer' as const }
+		: {};
+}
+---
+
+<div class="column">
+	<p class="section">{heading}</p>
+	{
+		items.map((item) => (
+			<div class="item-block">
+				<p class="item-name">
+					{item.href ? (
+						<a href={item.href} {...linkAttrs(item.href)}>
+							{item.name}
+						</a>
+					) : (
+						item.name
+					)}
+				</p>
+				{(item.description || item.tailLinks?.length) && (
+					<p class="item-description">
+						{item.description}
+						{item.tailLinks?.map((tl, i) => (
+							<>
+								{i === 0 && item.description ? ' ' : ''}
+								<a href={tl.href} {...linkAttrs(tl.href)}>
+									{tl.label}
+								</a>
+								{i < (item.tailLinks?.length ?? 0) - 1 ? ' ' : ''}
+							</>
+						))}
+						{item.tailLinks?.length ? '.' : ''}
+					</p>
+				)}
+			</div>
+		))
+	}
+</div>

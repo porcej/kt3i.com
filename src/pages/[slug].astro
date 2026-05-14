@@ -1,0 +1,34 @@
+---
+import SiteChrome from '../layouts/SiteChrome.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const pages = await getCollection('pages');
+	return pages.map((page) => ({
+		params: { slug: page.id },
+		props: { page },
+	}));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const d = page.data;
+
+const homeEntries = await getCollection('home');
+const home = homeEntries[0];
+if (!home) throw new Error('Missing home content');
+const hd = home.data;
+---
+
+<SiteChrome
+	title={d.title}
+	description={d.description}
+	social={hd.social}
+	copyrightName={hd.copyrightName}
+	copyrightUrl={hd.copyrightUrl}
+>
+	<article class="article-main" slot="main">
+		<a class="article-back" href="/">&larr; Home</a>
+		<Content />
+	</article>
+</SiteChrome>

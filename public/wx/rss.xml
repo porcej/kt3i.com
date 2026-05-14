@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rss version="2.0" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+   <channel>
+      <title>Kingstowne, VA, Weather Conditions</title>
+      <link>http://www.kt3i.com/wx/</link>
+      <description>Current conditions, and daily, monthly, and yearly summaries</description>
+      <language>en-us</language>
+      <pubDate>Mon, 23 May 2022 06:45:00 EDT</pubDate>
+
+      <lastBuildDate>Mon, 23 May 2022 06:45:00 EDT</lastBuildDate>
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <generator>weewx 4.5.1</generator>
+      <ttl>5.000000 minutes</ttl>
+      
+      <item>
+         <title>Weather Conditions at 05/23/2022 06:45:00 AM</title>
+         <link>http://www.kt3i.com/wx/</link>
+         <description>
+           Outside temperature: 61.5&#176;F; 
+           Barometer:    N/A; 
+           Wind: 1 mph from 350&#176;; 
+           Rain rate: 0.00 in/h; 
+           Inside temperature:    N/A
+         </description>
+         <pubDate>Mon, 23 May 2022 06:45:00 EDT</pubDate>
+	     <geo:lat>38.7668278</geo:lat>
+    	 <geo:long>-77.1513788</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Time:                05/23/2022 06:45:00 AM<br/>
+             Outside Temperature: 61.5&#176;F<br/>
+             Inside Temperature:     N/A<br/>
+             Wind Chill:          61.5&#176;F<br/>
+             Heat Index:          61.0&#176;F<br/>
+             Dewpoint:            54.6&#176;F<br/>
+             Humidity:            78%<br/>
+             Barometer:              N/A<br/>
+             Wind:                1 mph from 350&#176;<br/>
+             Rain Rate:           0.00 in/h<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Daily Weather Summary as of 05/23/2022 06:45:00 AM</title>
+         <link>http://www.kt3i.com/wx/</link>
+         <description>
+	        Min outside temperature: 61.4&#176;F at 06:43:18 AM;
+         	Max outside temperature: 69.5&#176;F at 12:03:33 AM;
+	        Min inside temperature:     N/A at    N/A;
+	        Max inside temperature:     N/A at    N/A;
+	        Min barometer:              N/A at    N/A;
+	        Max barometer:              N/A at    N/A;
+            Max wind :               10 mph from 63&#176; at 02:01:05 AM;
+            Rain today:              0.00 in
+         </description>
+         <pubDate>Mon, 23 May 2022 06:45:00 EDT</pubDate>
+	     <geo:lat>38.7668278</geo:lat>
+    	 <geo:long>-77.1513788</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Day:                     23 May 2022<br/>
+	         Min Outside Temperature: 61.4&#176;F at 06:43:18 AM<br/>
+	         Max Outside Temperature: 69.5&#176;F at 12:03:33 AM<br/>
+	         Min Inside Temperature:     N/A at    N/A<br/>
+	         Max Inside Temperature:     N/A at    N/A<br/>
+	         Min Barometer:              N/A at    N/A<br/>
+	         Max Barometer:              N/A at    N/A<br/>
+             Max Wind :               10 mph from 63&#176; at 02:01:05 AM<br/>
+             Rain today:              0.00 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Monthly Weather Summary as of 05/23/2022 06:45:00 AM</title>
+         <link>http://www.kt3i.com/wx/</link>
+         <description>
+	        Min outside temperature: -40.0&#176;F at 05/02/2022 04:03:45 PM;
+         	Max outside temperature: 99.2&#176;F at 05/21/2022 03:04:48 PM;
+	        Min inside temperature:     N/A at    N/A;
+	        Max inside temperature:     N/A at    N/A;
+	        Min barometer:              N/A at    N/A;
+	        Max barometer:              N/A at    N/A;
+            Max wind :               108 mph from    N/A at 05/01/2022 05:13:48 PM;
+            Rain total for month:    4.10 in
+         </description>
+         <pubDate>Mon, 23 May 2022 06:45:00 EDT</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Month:                   May 2022<br/>
+	         Max Outside Temperature: 99.2&#176;F at 05/21/2022 03:04:48 PM<br/>
+	         Min Outside Temperature: -40.0&#176;F at 05/02/2022 04:03:45 PM<br/>
+	         Max Inside Temperature:     N/A at    N/A<br/>
+	         Min Inside Temperature:     N/A at    N/A<br/>
+	         Min Barometer:              N/A at    N/A<br/>
+	         Max Barometer:              N/A at    N/A<br/>
+             Max Wind :               108 mph from    N/A at 05/01/2022 05:13:48 PM<br/>
+             Rain total for month:    4.10 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Yearly Weather Summary as of 05/23/2022 06:45:00 AM</title>
+         <link>http://www.kt3i.com/wx/</link>
+         <description>
+	        Min outside temperature: -40.0&#176;F at 04/28/2022 08:43:27 PM;
+         	Max outside temperature: 99.2&#176;F at 05/21/2022 03:04:48 PM;
+	        Min inside temperature:     N/A at    N/A;
+	        Max inside temperature:     N/A at    N/A;
+	        Min barometer:              N/A at    N/A;
+	        Max barometer:              N/A at    N/A;
+            Max wind :               108 mph from    N/A at 04/30/2022 05:37:38 PM;
+            Rain total for year:     14.89 in
+         </description>
+         <pubDate>Mon, 23 May 2022 06:45:00 EDT</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Year:                    2022<br/>
+	         Max Outside Temperature: 99.2&#176;F at 05/21/2022 03:04:48 PM<br/>
+	         Min Outside Temperature: -40.0&#176;F at 04/28/2022 08:43:27 PM<br/>
+	         Max Inside Temperature:     N/A at    N/A<br/>
+	         Min Inside Temperature:     N/A at    N/A<br/>
+	         Min Barometer:              N/A at    N/A<br/>
+	         Max Barometer:              N/A at    N/A<br/>
+             Max Wind :               108 mph from    N/A at 04/30/2022 05:37:38 PM<br/>
+             Rain total for year:     14.89 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+   </channel>
+</rss>

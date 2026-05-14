@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+	ogImage?: string;
+	social: {
+		label: string;
+		href: string;
+		icon: 'github' | 'linkedin' | 'twitter' | 'facebook' | 'email';
+	}[];
+	copyrightName: string;
+	copyrightUrl: string;
+}
+
+const { title, description, ogImage, social, copyrightName, copyrightUrl } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+	<slot name="main" />
+	<footer>
+		<SocialLinks links={social} ariaLabel="Social links" />
+		<div class="copyright">
+			<span>&copy;{year}</span>
+			{' '}
+			<a href={copyrightUrl}>{copyrightName}</a>
+		</div>
+	</footer>
+</BaseLayout>

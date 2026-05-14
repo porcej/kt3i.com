@@ -1,0 +1,35 @@
+---
+import SocialIcon from './SocialIcon.astro';
+
+interface Link {
+	label: string;
+	href: string;
+	icon: 'github' | 'linkedin' | 'twitter' | 'facebook' | 'email';
+}
+
+interface Props {
+	links: Link[];
+	ariaLabel?: string;
+}
+
+const { links, ariaLabel = 'Social' } = Astro.props;
+---
+
+<nav class="social-links" aria-label={ariaLabel}>
+	<ul>
+		{
+			links.map((link) => (
+				<li>
+					<a
+						href={link.href}
+						aria-label={link.label}
+						target={link.href.startsWith('http') ? '_blank' : undefined}
+						rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+					>
+						<SocialIcon icon={link.icon} />
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
